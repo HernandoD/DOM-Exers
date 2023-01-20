@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Fluid Layout Gallery</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="gallery.css" />
+    <script src='slideshow2.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+
+    <script id='list-photos' type='x/text-handlebars'>
+      {{> figPartial}}
+    </script>
+
+    <script id='figPartial' type='x/text-handlebars'>
+      <figure data-id={{id}}>
+        <img data-photo={{id}} src={{link}} alt=""/>
+        <figcaption>Photo {{id}}</figcaption>
+      </figure>     
+    </script>
+
+    <script id='ulTemp' type='x/text-handlebars'>
+      <ul>
+        {{#each photos}}
+        {{> ulPartial}}
+        {{/each}}
+      </ul>  
+    </script>
+
+    <script id='ulPartial' type='x/text-handlebars'>
+      <li><img data-photo={{id}} src={{link}} alt="" title="Photo {{id}}" /></li>
+    </script>
+
+  </head>
+  <body>
+    <main>
+      <h1>My Photo Gallery</h1>
+
+    </main>
+  </body>
+</html>

@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   let modalTemp = Handlebars.compile(document.querySelector('#modal-temp').innerHTML);
-  //Handlebars.registerPartial(document.querySelector('#modal-partial').innerHTML)
 
   let Modals = {
     handleClick(e) {

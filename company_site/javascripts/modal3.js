@@ -43,7 +43,6 @@ class Modal {
     document.querySelector('#modal').classList.remove('hide')
   }
 
-
 }
 
 
