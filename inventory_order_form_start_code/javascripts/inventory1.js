@@ -13,7 +13,6 @@ let inventory;
     cacheTemplate() {
       this.template = Handlebars.compile(document.querySelector('#inventory_item').innerHTML);
       document.querySelector('#inventory_item').remove();
-      console.log(this.template)
     },
 
     add() {
