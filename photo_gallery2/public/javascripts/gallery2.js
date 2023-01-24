@@ -137,8 +137,8 @@ class Controller {
     e.preventDefault();
     let target = e.target;
     let form = document.querySelector("form[method='post']");
-    form.querySelector("input[name='photo_id']").setAttribute('value', this.model.commentID)
-    let formattedData = this.getFormattedData(form)
+    form.querySelector("input[name='photo_id']").setAttribute('value', this.model.commentID);
+    let formattedData = this.getFormattedData(form);
 
     if (target.tagName === 'INPUT' && target.getAttribute('value') === 'Post Comment') {
       let comment = await this.model.postComment(formattedData);
